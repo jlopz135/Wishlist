@@ -1,6 +1,5 @@
 package com.example.wishlist
 
-import android.util.Log
 
 class ListFetcher {
     companion object {
@@ -13,16 +12,16 @@ class ListFetcher {
                 val item = Items(itemsList[i], price[i], link[i])
                 items.add(item)
             }
+
             return items
         }
-        fun addItemFunc(name:String, price: String, link: String): MutableList<Items> {
-            val newItem : MutableList<Items> = ArrayList()
-            for (i in itemsList.size-1 until itemsList.size+newItem.size-1) {
-                val item = Items(name, price, link)
+        fun addItemFunc(name:String, price: String, link: String): Items {
+            val items = getItems()
+            val item = Items(name, price, link)
                 //Log.v(item.toString(), item.toString())
-                newItem.add(item)
-            }
-            return newItem
+            items.add(item)
+
+            return item
         }
     }
 }

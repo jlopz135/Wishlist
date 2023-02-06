@@ -2,7 +2,6 @@ package com.example.wishlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wishlist.ListFetcher.Companion.addItemFunc
 
 class MainActivity : AppCompatActivity() {
-    lateinit var items: List<Items>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,9 +33,9 @@ class MainActivity : AppCompatActivity() {
             val linkText = link.text.toString()
 
             val add = addItemFunc(nameText, priceText, linkText)
-            items.addAll(add)
-            Log.v(nameText, nameText)
-            Toast.makeText(this, (nameText+priceText+linkText), Toast.LENGTH_SHORT).show()
+            items.add(add)
+
+            Toast.makeText(this, "Item Added to List!", Toast.LENGTH_SHORT).show()
 
             adapter.notifyDataSetChanged()
 
