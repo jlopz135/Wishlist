@@ -33,7 +33,6 @@
         android:ems="4"
         android:hint="Ex: 10.99"
         tools:text=""
-
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent" />

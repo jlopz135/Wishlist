@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:longClickable="true">
+    android:background="?attr/selectableItemBackground"
+    android:longClickable="true"
+    android:focusable="true">
 
     <TextView
         android:id="@+id/itemTv"
@@ -14,7 +16,7 @@
         tools:text="Item Name Here"
         android:layout_margin="10dp"
         android:textSize="20sp"
-
+        android:fontFamily="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +27,8 @@
         tools:text="Price Here"
         android:layout_margin="10dp"
         android:textSize="15sp"
-
+        android:fontFamily="serif"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,8 +38,20 @@
         android:layout_height="wrap_content"
         tools:text="LINK HERE"
         android:autoLink="web"
+        android:textStyle="italic"
         android:layout_margin="10dp"
         android:textSize="11sp"
+        android:fontFamily="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceTv" />
+
+    <TextView
+        android:id="@+id/moneySign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/priceTv"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
