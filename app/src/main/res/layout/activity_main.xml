@@ -32,6 +32,8 @@
         android:layout_margin="10dp"
         android:ems="4"
         android:hint="Ex: 10.99"
+        tools:text=""
+
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -43,6 +45,7 @@
         android:layout_margin="10dp"
         android:hint="Item Name"
         android:inputType="text"
+        tools:text=""
         app:layout_constraintBottom_toTopOf="@+id/store"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,6 +55,7 @@
         android:layout_height="48dp"
         android:inputType="text"
         android:layout_margin="10dp"
+        tools:text=""
         android:hint="Ex: www.google.com"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
